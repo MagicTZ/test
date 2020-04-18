@@ -1,0 +1,686 @@
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/hp/Desktop/新建文件夹/new/.git/
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ pwd
+/c/Users/hp/Desktop/新建文件夹/new
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ ll
+total 0
+-rw-r--r-- 1 hp 197609 0  4月 18 14:37 hh.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ ll .git/
+total 9
+-rw-r--r-- 1 hp 197609   9  4月 18 14:40 COMMIT_EDITMSG
+-rw-r--r-- 1 hp 197609 130  4月 18 15:58 config
+-rw-r--r-- 1 hp 197609  73  4月 18 14:36 description
+-rw-r--r-- 1 hp 197609  23  4月 18 14:36 HEAD
+drwxr-xr-x 1 hp 197609   0  4月 18 14:36 hooks/
+-rw-r--r-- 1 hp 197609 137  4月 18 14:40 index
+drwxr-xr-x 1 hp 197609   0  4月 18 14:36 info/
+drwxr-xr-x 1 hp 197609   0  4月 18 14:40 logs/
+drwxr-xr-x 1 hp 197609   0  4月 18 14:40 objects/
+drwxr-xr-x 1 hp 197609   0  4月 18 14:36 refs/
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/hp/Desktop/新建文件夹/new/.git/
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ pwd
+/c/Users/hp/Desktop/新建文件夹/new
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ vim good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        good.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git add good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   good.txt
+
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git restore --staged good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        good.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git add good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git rm --cached good.txt
+rm 'good.txt'
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        good.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ ll
+total 1
+-rw-r--r-- 1 hp 197609 14  4月 18 16:07 good.txt
+-rw-r--r-- 1 hp 197609  0  4月 18 14:37 hh.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git add good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git commit good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+[master 0435a08] My first commit.new file good.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ cat good.txt
+1111
+zhen tan
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ vim good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   good.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git add good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   good.txt
+
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git commit -m "My second commit, modify good.txt" good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+[master ea25627] My second commit, modify good.txt
+ 1 file changed, 1 insertion(+)
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb (HEAD -> master)
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+commit 4507d54a89e0d9bc9ebc32d34cc117e256c43adc
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 14:40:45 2020 +0200
+
+    haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git config --global user.name "MagicTZ"
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git config --global user.email "tz.paul1996@gmail.com"
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=F:/Git/install/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=MagicTZ
+user.email=tz.paul1996@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb (HEAD -> master)
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+commit 4507d54a89e0d9bc9ebc32d34cc117e256c43adc
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 14:40:45 2020 +0200
+
+    haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ vim good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   good.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git add good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git commit -m "for text history" good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+[master 3b2babd] for text history
+ 1 file changed, 1 insertion(+)
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log
+commit 3b2babd676c3b9bb518f69af1c256b8e2b468081 (HEAD -> master)
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:32:04 2020 +0200
+
+    for text history
+
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+commit 4507d54a89e0d9bc9ebc32d34cc117e256c43adc
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 14:40:45 2020 +0200
+
+    haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ vim good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   good.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git add good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git commit -m "for test" good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+[master 2742c5a] for test
+ 1 file changed, 1 insertion(+)
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log
+commit 2742c5a62097688a7de7d88b782e031ffeddc0ec (HEAD -> master)
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:33:24 2020 +0200
+
+    for test
+
+commit 3b2babd676c3b9bb518f69af1c256b8e2b468081
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:32:04 2020 +0200
+
+    for text history
+
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+:...skipping...
+commit 2742c5a62097688a7de7d88b782e031ffeddc0ec (HEAD -> master)
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:33:24 2020 +0200
+
+    for test
+
+commit 3b2babd676c3b9bb518f69af1c256b8e2b468081
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:32:04 2020 +0200
+
+    for text history
+
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+commit 4507d54a89e0d9bc9ebc32d34cc117e256c43adc
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 14:40:45 2020 +0200
+
+    haha.jpg
+~
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log
+commit 2742c5a62097688a7de7d88b782e031ffeddc0ec (HEAD -> master)
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:33:24 2020 +0200
+
+    for test
+
+commit 3b2babd676c3b9bb518f69af1c256b8e2b468081
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:32:04 2020 +0200
+
+    for text history
+
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+commit 4507d54a89e0d9bc9ebc32d34cc117e256c43adc
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 14:40:45 2020 +0200
+
+    haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ vim good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git add good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git commit -m "insert new word: wo ye bu zhi dao" good.txt
+warning: LF will be replaced by CRLF in good.txt.
+The file will have its original line endings in your working directory
+[master c071545] insert new word: wo ye bu zhi dao
+ 1 file changed, 2 insertions(+)
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log
+commit c0715451ed7d71ef323e9a3f2811dc465b0e1cb7 (HEAD -> master)
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:35:47 2020 +0200
+
+    insert new word: wo ye bu zhi dao
+
+commit 2742c5a62097688a7de7d88b782e031ffeddc0ec
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:33:24 2020 +0200
+
+    for test
+
+commit 3b2babd676c3b9bb518f69af1c256b8e2b468081
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:32:04 2020 +0200
+
+    for text history
+
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+commit 4507d54a89e0d9bc9ebc32d34cc117e256c43adc
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 14:40:45 2020 +0200
+
+    haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log --pretty=oneline
+c0715451ed7d71ef323e9a3f2811dc465b0e1cb7 (HEAD -> master) insert new word: wo ye bu zhi dao
+2742c5a62097688a7de7d88b782e031ffeddc0ec for test
+3b2babd676c3b9bb518f69af1c256b8e2b468081 for text history
+ea2562795b9e28c94612b1791e3c21d764d77bbb My second commit, modify good.txt
+0435a083f495cc7a2cf5c6bafd617a6158945211 My first commit.new file good.txt
+4507d54a89e0d9bc9ebc32d34cc117e256c43adc haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log --oneline
+c071545 (HEAD -> master) insert new word: wo ye bu zhi dao
+2742c5a for test
+3b2babd for text history
+ea25627 My second commit, modify good.txt
+0435a08 My first commit.new file good.txt
+4507d54 haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reflog
+c071545 (HEAD -> master) HEAD@{0}: commit: insert new word: wo ye bu zhi dao
+2742c5a HEAD@{1}: commit: for test
+3b2babd HEAD@{2}: commit: for text history
+ea25627 HEAD@{3}: commit: My second commit, modify good.txt
+0435a08 HEAD@{4}: commit: My first commit.new file good.txt
+4507d54 HEAD@{5}: commit (initial): haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reflog
+c071545 (HEAD -> master) HEAD@{0}: commit: insert new word: wo ye bu zhi dao
+2742c5a HEAD@{1}: commit: for test
+3b2babd HEAD@{2}: commit: for text history
+ea25627 HEAD@{3}: commit: My second commit, modify good.txt
+0435a08 HEAD@{4}: commit: My first commit.new file good.txt
+4507d54 HEAD@{5}: commit (initial): haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log
+commit c0715451ed7d71ef323e9a3f2811dc465b0e1cb7 (HEAD -> master)
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:35:47 2020 +0200
+
+    insert new word: wo ye bu zhi dao
+
+commit 2742c5a62097688a7de7d88b782e031ffeddc0ec
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:33:24 2020 +0200
+
+    for test
+
+commit 3b2babd676c3b9bb518f69af1c256b8e2b468081
+Author: MagicTZ <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:32:04 2020 +0200
+
+    for text history
+
+commit ea2562795b9e28c94612b1791e3c21d764d77bbb
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:23:13 2020 +0200
+
+    My second commit, modify good.txt
+
+commit 0435a083f495cc7a2cf5c6bafd617a6158945211
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 16:14:57 2020 +0200
+
+    My first commit.new file good.txt
+
+commit 4507d54a89e0d9bc9ebc32d34cc117e256c43adc
+Author: tz.paul1996@gmail.com <tz.paul1996@gmail.com>
+Date:   Sat Apr 18 14:40:45 2020 +0200
+
+    haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log --oneline
+c071545 (HEAD -> master) insert new word: wo ye bu zhi dao
+2742c5a for test
+3b2babd for text history
+ea25627 My second commit, modify good.txt
+0435a08 My first commit.new file good.txt
+4507d54 haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log --pretty=oneline
+c0715451ed7d71ef323e9a3f2811dc465b0e1cb7 (HEAD -> master) insert new word: wo ye bu zhi dao
+2742c5a62097688a7de7d88b782e031ffeddc0ec for test
+3b2babd676c3b9bb518f69af1c256b8e2b468081 for text history
+ea2562795b9e28c94612b1791e3c21d764d77bbb My second commit, modify good.txt
+0435a083f495cc7a2cf5c6bafd617a6158945211 My first commit.new file good.txt
+4507d54a89e0d9bc9ebc32d34cc117e256c43adc haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reflog
+c071545 (HEAD -> master) HEAD@{0}: commit: insert new word: wo ye bu zhi dao
+2742c5a HEAD@{1}: commit: for test
+3b2babd HEAD@{2}: commit: for text history
+ea25627 HEAD@{3}: commit: My second commit, modify good.txt
+0435a08 HEAD@{4}: commit: My first commit.new file good.txt
+4507d54 HEAD@{5}: commit (initial): haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reset --hard 2742c5a
+HEAD is now at 2742c5a for test
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reflog
+2742c5a (HEAD -> master) HEAD@{0}: reset: moving to 2742c5a
+c071545 HEAD@{1}: commit: insert new word: wo ye bu zhi dao
+2742c5a (HEAD -> master) HEAD@{2}: commit: for test
+3b2babd HEAD@{3}: commit: for text history
+ea25627 HEAD@{4}: commit: My second commit, modify good.txt
+0435a08 HEAD@{5}: commit: My first commit.new file good.txt
+4507d54 HEAD@{6}: commit (initial): haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ cat good.txt
+1111
+zhen tan
+UUUUUUUUU
+wo jiao bai xiao fei
+ni jiao shen me ne
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reset --hard ^C
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reset --hard ea25627
+HEAD is now at ea25627 My second commit, modify good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reflog
+ea25627 (HEAD -> master) HEAD@{0}: reset: moving to ea25627
+2742c5a HEAD@{1}: reset: moving to 2742c5a
+c071545 HEAD@{2}: commit: insert new word: wo ye bu zhi dao
+2742c5a HEAD@{3}: commit: for test
+3b2babd HEAD@{4}: commit: for text history
+ea25627 (HEAD -> master) HEAD@{5}: commit: My second commit, modify good.txt
+0435a08 HEAD@{6}: commit: My first commit.new file good.txt
+4507d54 HEAD@{7}: commit (initial): haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reset --hard 2742c5a
+HEAD is now at 2742c5a for test
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reflog
+2742c5a (HEAD -> master) HEAD@{0}: reset: moving to 2742c5a
+ea25627 HEAD@{1}: reset: moving to ea25627
+2742c5a (HEAD -> master) HEAD@{2}: reset: moving to 2742c5a
+c071545 HEAD@{3}: commit: insert new word: wo ye bu zhi dao
+2742c5a (HEAD -> master) HEAD@{4}: commit: for test
+3b2babd HEAD@{5}: commit: for text history
+ea25627 HEAD@{6}: commit: My second commit, modify good.txt
+0435a08 HEAD@{7}: commit: My first commit.new file good.txt
+4507d54 HEAD@{8}: commit (initial): haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reset --hard c071545
+HEAD is now at c071545 insert new word: wo ye bu zhi dao
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ cat good.txt
+1111
+zhen tan
+UUUUUUUUU
+wo jiao bai xiao fei
+ni jiao shen me ne
+wo ye bu zhi dao
+
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log --oneline
+c071545 (HEAD -> master) insert new word: wo ye bu zhi dao
+2742c5a for test
+3b2babd for text history
+ea25627 My second commit, modify good.txt
+0435a08 My first commit.new file good.txt
+4507d54 haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reset --hard HEAD^
+HEAD is now at 2742c5a for test
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ tail -n 3 good.txt
+UUUUUUUUU
+wo jiao bai xiao fei
+ni jiao shen me ne
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log --oneline
+2742c5a (HEAD -> master) for test
+3b2babd for text history
+ea25627 My second commit, modify good.txt
+0435a08 My first commit.new file good.txt
+4507d54 haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reset --hard HEAD^^^
+HEAD is now at 0435a08 My first commit.new file good.txt
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git log --oneline
+0435a08 (HEAD -> master) My first commit.new file good.txt
+4507d54 haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ cat good.txt
+1111
+zhen tan
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git reflog
+0435a08 (HEAD -> master) HEAD@{0}: reset: moving to HEAD^^^
+2742c5a HEAD@{1}: reset: moving to HEAD^
+c071545 HEAD@{2}: reset: moving to c071545
+2742c5a HEAD@{3}: reset: moving to 2742c5a
+ea25627 HEAD@{4}: reset: moving to ea25627
+2742c5a HEAD@{5}: reset: moving to 2742c5a
+c071545 HEAD@{6}: commit: insert new word: wo ye bu zhi dao
+2742c5a HEAD@{7}: commit: for test
+3b2babd HEAD@{8}: commit: for text history
+ea25627 HEAD@{9}: commit: My second commit, modify good.txt
+0435a08 (HEAD -> master) HEAD@{10}: commit: My first commit.new file good.txt
+4507d54 HEAD@{11}: commit (initial): haha.jpg
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$ git help reset
+
+hp@DESKTOP-H0SOIHT MINGW64 ~/Desktop/新建文件夹/new (master)
+$
